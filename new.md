@@ -19,7 +19,7 @@ The objective of Raze Network is to enable cross-chain privacy-preserving paymen
 
 #### Team Interest
 
-The Raze Network team has deep knowledge of zero-knowledge algorithms and applied zkSNARK techniques to Ethereum platform. Our team also has seasoned experience in trustless zkSNARK schemes with almost constant size proofs, efficient proof generation and verification. The background of the team members consists of both engineering and academic talents.
+The Raze Network team has deep knowledge of zero-knowledge algorithms and applied zkSNARK techniques to Ethereum platform. Our team also has lots of experience in designing and implementing trustless zksnark schemes. The background of the team members consists of both engineering and academic talents.
 
 Substrate is a new and promising platform to implement the privacy protocol and leverage the cross-chain features to achieve state-of-the-art privacy solutions to all the DeFi applications. Thus, we are confident that we have the capability to bring more privacy contributions to the Substrate framework as well.
 
@@ -31,7 +31,7 @@ We will apply the Zether framework to build the second-layer decentralized anony
   <img src="https://raw.githubusercontent.com/huaihuaisz/General-Grants-Program/master/src/image5.png" alt="" width="70%"/>
 </p>
 
-The mint module will create a Raze account by running a mint contract and deposit the anonymized token to the Raze account. Each Raze account is identified by a public key pk and the mint module will generate a ciphertext under the account public key which encrypts the amount of minted token. If the account has already existed before the mint operation, the generated ciphertext will be homomorphically added to the existing ciphertext to increase the encrypted amount.
+The mint module will create a Raze account by running a mint contract and deposit the anonymized token to the Raze account. Each Raze account is identified by a public key `pk` and the mint module will generate a ciphertext under the account public key which encrypts the amount of minted token. If the account has already existed before the mint operation, the generated ciphertext will be homomorphically added to the existing ciphertext to increase the encrypted amount.
 
 Since the balance and transaction amount of each Raze account is encrypted and therefore hidden, the remaining question for the transfer module is how to hide the identities of the involved parties. Similar to the anonymous transfer module of the Zether scheme, we hide the identities of the involved parties through the "one-out-of-many" proof. The "one-out-of-many" proof is conceptually close to ring signature, which proves that a transaction is launched by one of the many parties in the anonymity set (or the ring) while not revealing exactly whom among them is the sender or receiver of the transaction, and thus hide their identities. The transfer module's zkp will also prove the payment consistency and provide a range proof demonstrating there is no negative amount involved in the transaction, which could potentially allow the adversary to create money out of thin air.
 
@@ -50,7 +50,7 @@ Each raze user can register a raze account any time(s) he wishes. The registrati
 
 To invoke the Mint contract, the client-side runs a CreateMintTx algorithm, which takes as input the raze account `pk` and the amount of native token `amt` as inputs. The output of the CreateMintTx algorithm is a ciphertext `cp_1` encrypted under the public key `pk` If the raze account `pk` is already attached with a ciphertext `cp_0`, the newly created ciphertext will be homomorphically added to the existing ciphertext to increase the encrypted amount. The updated ciphertext will be formed as `cp_1*cp_0`. Otherwise, the new ciphertext will be attached to the raze account. The native token will be stored in the mint contract.
 
-To invoke the transfer contract, the client-side runs a CreateTransferTx algorithm, which takes as inputs the raze account secret key `sk`, and the amount of transferred token `amt`, the public keys of sender `pk_s`, receiver `pk_r` and the public keys of the anonymity set `pk_a}`. The output of the CreateTransferTx algorithm is a zero-knowledge proof that the prover knows one of the secret keys of the aforementioned public key set, the payment consistency proof, and range proof. The statement of this zkp is 
+To invoke the transfer contract, the client-side runs a CreateTransferTx algorithm, which takes as inputs the raze account secret key `sk`, and the amount of transferred token `amt`, the public keys of sender `pk_s`, receiver `pk_r` and the public keys of the anonymity set `{pk_a}`. The output of the CreateTransferTx algorithm is a zero-knowledge proof that the prover knows one of the secret keys of the aforementioned public key set, the payment consistency proof, and range proof. The statement of this zkp is 
 <p align="center">
   <img src="https://raw.githubusercontent.com/huaihuaisz/General-Grants-Program/master/src/image3.png" alt="" width="60%"/>
 </p>
