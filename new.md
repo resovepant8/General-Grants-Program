@@ -14,6 +14,8 @@ Raze network is a second-layer protocol that will provide cross-chain payment pr
 
 The objective of Raze Network is to enable cross-chain privacy-preserving payment and DeFi systems, while protecting the transparency of your assets and behaviors from surveillance. Eventually, Raze Network can anonymize all the cryptocurrency in the world.
 
+![img](https://raw.githubusercontent.com/huaihuaisz/General-Grants-Program/master/src/image3.png)
+
 #### Team Interest
 The Raze Network team has deep knowledge of zero-knowledge algorithms and applied zkSNARK techniques to Ethereum platform. Our team also has seasoned experience in trustless zkSNARK schemes with almost constant size proofs, efficient proof generation and verification. The background of the team members consists of both engineering and academic talents.
 
