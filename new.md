@@ -74,7 +74,7 @@ The ledger state will mainly keep a record of the raze accounts, the balance enc
 
 ##### RazeVM and SDK
 
-Our ultimate goal is to provide a SDK from a high-level perspective with the above functions. The RazeVM will include the following modules described above.The SDK will include the client that supports the Register, CreateMintTx, CreateTransferTx, CreateRedeemTx, CreateLockTx, and CreateUnlockTx algorithms. The clients will be able to generate the necessary transactions to trigger the corresponding modules.
+Our ultimate goal is to provide a SDK from a high-level perspective with the above functions. The RazeVM will include the following modules described above.The SDK will include the client that supports the **Register, CreateMintTx, CreateTransferTx, CreateRedeemTx, CreateLockTx, and CreateUnlockTx** algorithms. The clients will be able to generate the necessary transactions to trigger the corresponding modules.
 
 #### Ecosystem Fits
 
