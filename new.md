@@ -10,7 +10,7 @@
 
 #### Introduction
 
-Raze network is a second-layer protocol that will provide cross-chain payment privacy for the entire DeFi stack of the Polkadot ecosystem. The core technical module of the Raze network is a second-layer decentralized anonymous payment module, which will serve as a universal plugin-and-play infrastructure for the Polkadot DeFi ecosystem. This module will be imported as a substrate-based smart contract, which allows the user to hide one's account address and financial information (as shown in the Figure below) before participating the Polkadot DeFi stacks, be it DEX, liquidity mining, loan, insurance, etc. Since the Zether framework was designed to support the Ethereum account model, our contract will support both the mainstream token issued in the Polkadot ecosystem such as DOT/KUSAMA and ERC-20 cross-chain private payment, and hence significantly increase the liquidity of the Polkadot ecosystem. 
+Raze Network is a second-layer protocol that will provide cross-chain payment privacy for the entire DeFi stack of the Polkadot ecosystem. The core technical module of the Raze Network is a second-layer decentralized anonymous payment module, which will serve as a universal plugin-and-play infrastructure for the Polkadot DeFi ecosystem. This module will be imported as a substrate-based smart contract, which allows the user to hide one's account address and financial information (as shown in the Figure below) before participating the Polkadot DeFi stacks, be it DEX, liquidity mining, loan, insurance, etc. Since the Zether framework was designed to support the Ethereum account model, our contract will support both the mainstream token issued in the Polkadot ecosystem such as DOT/KUSAMA and ERC-20 cross-chain private payment, and hence significantly increase the liquidity of the Polkadot ecosystem. 
 
 The objective of Raze Network is to enable cross-chain privacy-preserving payment and DeFi systems, while protecting the transparency of your assets and behaviors from surveillance. Eventually, Raze Network can anonymize all the cryptocurrency in the world.
 <p align="center">
@@ -37,7 +37,7 @@ Since the balance and transaction amount of each Raze account is encrypted and t
 
 The redeem module converts the anonymized token back to its original form. The redeem module also needs to invoke a zero-knowledge proof functionality to prove that the user initiating the redeem module knows the secret key of the corresponding Raze account and the redeemed amount is smaller than the Raze account balance.
 
-To sum up, we use public-key homomorphic encryption to ensure the balance and transactional amount confidentiality and invoke the "one-out-of-many" proof to hide the sender and receiver identities, and some other zero-knowledge proof schemes to guarantee the payment consistency. The raze network can be viewed as a pool of boiling water, where each water molecule interacts with each other in a chaotic and vibrant fashion. Whenever a user deposits a certain amount of token through invoking the mint module, the token would be like a water molecule dropping into this pool of boiling water, it is no longer traceable.
+To sum up, we use public-key homomorphic encryption to ensure the balance and transactional amount confidentiality and invoke the "one-out-of-many" proof to hide the sender and receiver identities, and some other zero-knowledge proof schemes to guarantee the payment consistency. The Raze Network can be viewed as a pool of boiling water, where each water molecule interacts with each other in a chaotic and vibrant fashion. Whenever a user deposits a certain amount of token through invoking the mint module, the token would be like a water molecule dropping into this pool of boiling water, it is no longer traceable.
 
 To facilitate the DeFi functionality, we have two additional modules: lock and unlock. The lock module would allow an account owner to lock the account while the unlock module allows the account owner to unlock the account.
 
@@ -64,11 +64,11 @@ The user can invoke the lock module by running a CreateLockTx algorithm on the c
 
 ##### Substrate/Polkadot Integration
 
-The raze network will be implemented as Substrate modules. More specifically, we will build a raze substrate pallet that supports:
+The Raze Network will be implemented as Substrate modules. More specifically, we will build a raze substrate pallet that supports:
 * The user could mint an anonymized token by invoking the Mint module. It will support all the mainstream tokens issued on the Polkadot blockchain such as DOT or KUSAMA, and ERC-20 tokens.
 * A user who owns a raze account could transfer the anonymized token to another raze account by running the Transfer module to hide the identities of the involved parties and the transferred amount.
 * A user could run the Redeem module to convert the anonymized token back to its native form.
-* The lock and unlock modules will allow the users to participate in the anonymity mining, and thus provide incentives to the users to join the raze network and thus increase the anonymity set.
+* The lock and unlock modules will allow the users to participate in the anonymity mining, and thus provide incentives to the users to join the Raze Network and thus increase the anonymity set.
 
 The ledger state will mainly keep a record of the raze accounts, the balance encryption, and the pending transfer tables, etc.
 
@@ -78,10 +78,10 @@ Our ultimate goal is to provide a SDK from a high-level perspective with the abo
 
 #### Ecosystem Fits
 
-Decentralized finance (DeFi) in the Polkadot ecosystem is still a newborn. Privacy is essential to the success and prosperity of DeFi. The raze network will serve as a vital infrastructure for the future development of privacy-preserving DeFi in the Polkadot ecosystem. The raze network will not only liberate the Polkadot DeFi ecosystem from the surveillance of the big brother, but also significantly increase the liquidity of the Polkadot ecosystem. The closest product to the Raze network is the Manta network, which is a privacy-preserving DEX system. Our proposal differs from theirs in the following regards:
+Decentralized finance (DeFi) in the Polkadot ecosystem is still a newborn. Privacy is essential to the success and prosperity of DeFi. The Raze Network will serve as a vital infrastructure for the future development of privacy-preserving DeFi in the Polkadot ecosystem. The Raze Network will not only liberate the Polkadot DeFi ecosystem from the surveillance of the big brother, but also significantly increase the liquidity of the Polkadot ecosystem. The closest product to the Raze Network is the Manta Network, which is a privacy-preserving DEX system. Our proposal differs from theirs in the following regards:
 * The Zether framework is designed for the Ethereum account-based model, and hence it naturally facilitates the cross-chain private payment of ERC-20 tokens in the Polkadot ecosystem. Since all the aforementioned smart contract modules are supposed to be imported as Substrate-based modules, they will also be compatible with the tokens issued in the Polkadot ecosystem, such as DOT or KUSAMA. To sum up, our work will significantly increase the liquidity of the Polkadot system due to its cross-chain interoperability.
-* Our product is much more generic in the sense that it supports all the DeFi products in the Polkadot system, and it also supports anonymity mining, which in itself is already a vital DeFi feature. In contrast, the Manta network focuses solely on developing the private DEX system, which limits the scope of its application scenarios severely.
-* From the technical perspective, the underlying zero-knowledge proof scheme for the Manta network requires trusted setup, which is why they require a trust ceremony. In contrast, the zero-knowledge proof scheme we adopt does not require any trusted setup. All the public parameters of our system can be randomly sampled from the underlying group in a totally transparent fashion, which is much more in accordance with the decentralization ethos.
+* Our product is much more generic in the sense that it supports all the DeFi products in the Polkadot system, and it also supports anonymity mining, which in itself is already a vital DeFi feature. In contrast, the Manta Network focuses solely on developing the private DEX system, which limits the scope of its application scenarios severely.
+* From the technical perspective, the underlying zero-knowledge proof scheme for the Manta Network requires trusted setup, which is why they require a trust ceremony. In contrast, the zero-knowledge proof scheme we adopt does not require any trusted setup. All the public parameters of our system can be randomly sampled from the underlying group in a totally transparent fashion, which is much more in accordance with the decentralization ethos.
 
 #### The Purpose of this Grant
 
