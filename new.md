@@ -85,7 +85,7 @@ The purpose of this grant is to deliver Raze Substrate Modules and cross-chain b
 
 ### Team Website
 
-* www.raze.network
+* [www.raze.network](http://www.raze.network)
 
 ### Legal Structure
 * Digital Asset Investment Management Ltd. is a company registered in Cayman Islands.
