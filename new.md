@@ -13,7 +13,7 @@
 Raze network is a second-layer protocol that will provide cross-chain payment privacy for the entire DeFi stack of the Polkadot ecosystem. The core technical module of the Raze network is a second-layer decentralized anonymous payment module, which will serve as a universal plugin-and-play infrastructure for the Polkadot DeFi ecosystem. This module will be imported as a substrate-based smart contract, which allows the user to hide one's account address and financial information (as shown in the Figure below) before participating the Polkadot DeFi stacks, be it DEX, liquidity mining, loan, insurance, etc. Since the Zether framework was designed to support the Ethereum account model, our contract will support both the mainstream token issued in the Polkadot ecosystem such as DOT/KUSAMA and ERC-20 cross-chain private payment, and hence significantly increase the liquidity of the Polkadot ecosystem. 
 
 The objective of Raze Network is to enable cross-chain privacy-preserving payment and DeFi systems, while protecting the transparency of your assets and behaviors from surveillance. Eventually, Raze Network can anonymize all the cryptocurrency in the world.
-![img]()
+
 #### Team Interest
 The Raze Network team has deep knowledge of zero-knowledge algorithms and applied zkSNARK techniques to Ethereum platform. Our team also has seasoned experience in trustless zkSNARK schemes with almost constant size proofs, efficient proof generation and verification. The background of the team members consists of both engineering and academic talents.
 
