@@ -14,7 +14,7 @@ Raze network is a second-layer protocol that will provide cross-chain payment pr
 
 The objective of Raze Network is to enable cross-chain privacy-preserving payment and DeFi systems, while protecting the transparency of your assets and behaviors from surveillance. Eventually, Raze Network can anonymize all the cryptocurrency in the world.
 
-![img](https://raw.githubusercontent.com/huaihuaisz/General-Grants-Program/master/src/image2.png)
+<img src="https://raw.githubusercontent.com/huaihuaisz/General-Grants-Program/master/src/image2.png" alt="" width="90%"/>
 
 #### Team Interest
 
@@ -26,7 +26,8 @@ Substrate is a new and promising platform to implement the privacy protocol and 
 #### Project Architecture
 
 We will apply the Zether framework to build the second-layer decentralized anonymous payment module. It will be then imported as substrate-based smart contracts. Similar to the Zether framework, it will have three technical modules: mint, transfer and redeem. The mint module will convert a token into its anonymized version, while the redeem module will convert the anonymized token back to its native form. The transfer module is the one that enables the anonymous transfer of the anonymized token. It will conceal the transaction amount and guarantee  anonymity for both sender and receiver.
-![img](https://raw.githubusercontent.com/huaihuaisz/General-Grants-Program/master/src/image5.png)
+<img src="https://raw.githubusercontent.com/huaihuaisz/General-Grants-Program/master/src/image5.png" alt="" width="90%"/>
+
 
 The mint module will create a Raze account by running a mint contract and deposit the anonymized token to the Raze account. Each Raze account is identified by a public key pk and the mint module will generate a ciphertext under the account public key which encrypts the amount of minted token. If the account has already existed before the mint operation, the generated ciphertext will be homomorphically added to the existing ciphertext to increase the encrypted amount.
 
@@ -39,7 +40,8 @@ To sum up, we use public-key homomorphic encryption to ensure the balance and tr
 To facilitate the DeFi functionality, we have two additional modules: lock and unlock. The lock module would allow an account owner to lock the account while the unlock module allows the account owner to unlock the account.
 
 We will also build a cross-chain bridge that can map any ERC-20 token to the Polkadot blockchain and thus enable the cross-chain payment of these tokens.
-![img](https://raw.githubusercontent.com/huaihuaisz/General-Grants-Program/master/src/image1.png)
+<img src="https://raw.githubusercontent.com/huaihuaisz/General-Grants-Program/master/src/image1.png" alt="" width="90%"/>
+
 
 Each raze user can register a raze account any time(s) he wishes. The registration algorithm CreateAddress generates a secret key `sk` and the corresponding public key `pk`. The public key is the identifier of the raze account.
 
