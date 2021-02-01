@@ -52,7 +52,7 @@ To invoke the Mint contract, the client-side runs a CreateMintTx algorithm, whic
 
 To invoke the transfer contract, the client-side runs a CreateTransferTx algorithm, which takes as inputs the raze account secret key `sk`, and the amount of transferred token `amt`, the public keys of sender `pk_s`, receiver `pk_r` and the public keys of the anonymity set `pk_a}`. The output of the CreateTransferTx algorithm is a zero-knowledge proof that the prover knows one of the secret keys of the aforementioned public key set, the payment consistency proof, and range proof. The statement of this zkp is 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/huaihuaisz/General-Grants-Program/master/src/image3.png" alt="" width="50%"/>
+  <img src="https://raw.githubusercontent.com/huaihuaisz/General-Grants-Program/master/src/image3.png" alt="" width="60%"/>
 </p>
 
 The client-side runs a CreateRedeemTx algorithm to invoke the redeem contract. It takes the account secret key `sk`, the withdrawal amount `amt`, and the public key `pk` as input to generate a zero-knowledge proof showing that the user knows the secret key `sk` for the account public key `pk` and the account has enough balance for the redeem operation. The zero-knowledge proof will be used to invoke the redeem contract. The statement of this zkp is 
