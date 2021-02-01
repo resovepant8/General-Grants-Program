@@ -57,7 +57,7 @@ To invoke the transfer contract, the client-side runs a CreateTransferTx algorit
 
 The client-side runs a CreateRedeemTx algorithm to invoke the redeem contract. It takes the account secret key `sk`, the withdrawal amount `amt`, and the public key `pk` as input to generate a zero-knowledge proof showing that the user knows the secret key `sk` for the account public key `pk` and the account has enough balance for the redeem operation. The zero-knowledge proof will be used to invoke the redeem contract. The statement of this zkp is 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/huaihuaisz/General-Grants-Program/master/src/image4.png" alt="" width="50%"/>
+  <img src="https://raw.githubusercontent.com/huaihuaisz/General-Grants-Program/master/src/image4.png" alt="" width="40%"/>
 </p>
  
 The user can invoke the lock module by running a CreateLockTx algorithm on the client-side. The client inputs a secret key `sk` and an Ethereum address `addr` to generate a signature to demonstrate he is indeed the owner of the account and he authorizes to lock the account to the input address `addr`. The signature would be `Sign(x, addr)`. Similarly, the user can invoke the unlock module by running a CreateUnlockTx on the client-side. The input of CreateUnlockTx algorithm is the same as that of the CreateLockTx algorithm. It will generate a similar signature to unlock the account. Note, we will embed a nonce derived from the current epoch number to prevent the replay attack.
